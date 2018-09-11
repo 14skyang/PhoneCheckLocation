@@ -25,14 +25,14 @@ public class HttpUtil {
 
             try {
 
-                phoneBean = gson.fromJson(gsonResult, PhoneBean.class);
+                phoneBean = gson.fromJson(gsonResult, PhoneBean.class);//解析数据到对应的实体类bean对象
                 Log.e("phoneBean",phoneBean.getResult().getMobileNumber());
                Log.e("111", phoneBean.resultBean.getCity());
             }catch (Exception e){
 
             }
         }
-        return phoneBean;//把值返回给phoneBean
+        return phoneBean;//把值返回给调用本函数的函数
     }
     public static String doGet(String edittext){
 
